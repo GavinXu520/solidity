@@ -41,7 +41,7 @@ enum class DocumentationType: uint8_t;
 class CommandLineInterface
 {
 public:
-	CommandLineInterface() {}
+	CommandLineInterface() = default;
 
 	/// Parse command line arguments and return false if we should not continue
 	bool parseArguments(int _argc, char** _argv);

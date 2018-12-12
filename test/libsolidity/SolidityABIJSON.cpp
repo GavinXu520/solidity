@@ -38,7 +38,7 @@ namespace test
 class JSONInterfaceChecker
 {
 public:
-	JSONInterfaceChecker(): m_compilerStack() {}
+	JSONInterfaceChecker() = default;
 
 	void checkInterface(std::string const& _code, std::string const& _contractName, std::string const& _expectedInterfaceString)
 	{
@@ -59,7 +59,7 @@ public:
 	}
 
 protected:
-	CompilerStack m_compilerStack;
+	CompilerStack m_compilerStack {};
 };
 
 BOOST_FIXTURE_TEST_SUITE(SolidityABIJSON, JSONInterfaceChecker)

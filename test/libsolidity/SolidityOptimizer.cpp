@@ -45,7 +45,7 @@ namespace test
 class OptimizerTestFramework: public SolidityExecutionFramework
 {
 public:
-	OptimizerTestFramework() { }
+	OptimizerTestFramework() = default;
 
 	bytes const& compileAndRunWithOptimizer(
 		std::string const& _sourceCode,

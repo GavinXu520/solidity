@@ -39,7 +39,7 @@ namespace test
 class DocumentationChecker
 {
 public:
-	DocumentationChecker(): m_compilerStack() {}
+	DocumentationChecker() = default;
 
 	void checkNatspec(
 		std::string const& _code,
@@ -77,7 +77,7 @@ public:
 	}
 
 private:
-	CompilerStack m_compilerStack;
+	CompilerStack m_compilerStack {};
 };
 
 BOOST_FIXTURE_TEST_SUITE(SolidityNatspecJSON, DocumentationChecker)
